@@ -11,7 +11,7 @@ The code is structured as follows:
 ### Quantum Neural Networks:
 - [src/dataReuploading](src/dataReuploading) folder contains code containing the Quantum Neural Network part. 
   - [SingleQNN](src/dataReuploading/SingleQNN.py) models 1 qubit neural network.
-  - [MultiQNN](src/dataReuploading/MultiQNN.py) models n qubit neural networs, being n arbitrary. In principle, taking  `n_qubits=1` should get the same results and object than the SingleQNN code.
+  - [MultiQNN](src/dataReuploading/MultiQNN.py) models n qubit neural networks, being n arbitrary. In principle, taking  `n_qubits=1` should get the same results and object than the SingleQNN code.
   - [Constant](src/dataReuploading/Constant.py) is not actually a QNN. It takes the training set and seeks the most popular layer. Then, it maps every possible state in the Hilbert space to that specific label, with no computations being done. It is used as the *enemy* to beat, the minimum accuracy of the QNN and EQK to be achieved.
 
 Any network in any QNN class has a `train` method as well as a method to save the python object containing the net (`save_qnn`) and the corresponding method to load it (`load_qnn`), the latter being static.
